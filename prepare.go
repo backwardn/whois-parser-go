@@ -119,10 +119,12 @@ func prepareEDU(text string) string {
 			"Address",
 			"Address",
 			"Address",
+			"Address",
 		},
 		"Administrative Contact:": {
 			"Name",
 			"Organization",
+			"Address",
 			"Address",
 			"Address",
 			"Address",
@@ -132,6 +134,7 @@ func prepareEDU(text string) string {
 		"Technical Contact:": {
 			"Name",
 			"Organization",
+			"Address",
 			"Address",
 			"Address",
 			"Address",
@@ -159,6 +162,20 @@ func prepareEDU(text string) string {
 			if token == "" {
 				result += "\n" + v
 			} else {
+				// address ending now jump to phone
+				if tokens[token][index] == "Address" && strings.HasPrefix(v, "+") {
+					var found int
+					for m, n := range tokens[token] {
+						if n == "Phone" {
+							found = m
+							break
+						}
+					}
+					if found == 0 {
+						break
+					}
+					index = found
+				}
 				result += fmt.Sprintf("\n%s %s: %s", token[:len(token)-1], tokens[token][index], v)
 				index += 1
 			}
@@ -964,19 +981,21 @@ func prepareFI(text string) string {
 		if len(v) == 0 {
 			continue
 		}
-
 		if v[0] == '>' {
 			token = ""
 		}
-
 		if _, ok := tokens[v]; ok {
 			token = tokens[v]
 		} else {
-			if token != "" {
-				// special case as for various reasons this was causing lots of issues
-				if token == "Registrar" && strings.Contains(v, "registrar..........:") {
-					v = strings.Replace(v, "registrar..........:", "name..........:", 1)
+			if strings.Contains(v, ":") {
+				vv := strings.SplitN(v, ":", 2)
+				vv[0] = strings.Trim(vv[0], ".")
+				if token == "Registrar" && vv[0] == "registrar" {
+					vv[0] = "name"
 				}
+				v = fmt.Sprintf("%s: %s", vv[0], vv[1])
+			}
+			if token != "" {
 				v = fmt.Sprintf("%s %s", token, v)
 			}
 		}
