@@ -21,43 +21,43 @@ package whoisparser
 
 // WhoisInfo storing domain whois info
 type WhoisInfo struct {
-	Domain         Domain  `json:"domain"`
-	Registrar      Contact `json:"registrar"`
-	Registrant     Contact `json:"registrant"`
-	Administrative Contact `json:"administrative"`
-	Technical      Contact `json:"technical"`
-	Billing        Contact `json:"billing"`
+	Domain         *Domain  `json:"domain,omitempty"`
+	Registrar      *Contact `json:"registrar,omitempty"`
+	Registrant     *Contact `json:"registrant,omitempty"`
+	Administrative *Contact `json:"administrative,omitempty"`
+	Technical      *Contact `json:"technical,omitempty"`
+	Billing        *Contact `json:"billing,omitempty"`
 }
 
 // Domain storing domain name info
 type Domain struct {
-	ID             string `json:"id"`
-	Domain         string `json:"domain"`
-	Name           string `json:"name"`
-	Extension      string `json:"extension"`
-	Status         string `json:"status"`
-	DNSSEC         string `json:"dnssec"`
-	WhoisServer    string `json:"whois_server"`
-	NameServers    string `json:"name_servers"`
-	CreatedDate    string `json:"created_date"`
-	UpdatedDate    string `json:"updated_date"`
-	ExpirationDate string `json:"expiration_date"`
+	ID             string   `json:"id,omitempty"`
+	Domain         string   `json:"domain,omitempty"`
+	Name           string   `json:"name,omitempty"`
+	Extension      string   `json:"extension,omitempty"`
+	WhoisServer    string   `json:"whois_server,omitempty"`
+	Status         []string `json:"status,omitempty"`
+	NameServers    []string `json:"name_servers,omitempty"`
+	DnsSec         bool     `json:"dnssec,omitempty"`
+	CreatedDate    string   `json:"created_date,omitempty"`
+	UpdatedDate    string   `json:"updated_date,omitempty"`
+	ExpirationDate string   `json:"expiration_date,omitempty"`
 }
 
 // Contact storing domain contact info
 type Contact struct {
-	ID           string `json:"id"`
-	Name         string `json:"name"`
-	Organization string `json:"organization"`
-	Street       string `json:"street"`
-	City         string `json:"city"`
-	Province     string `json:"province"`
-	PostalCode   string `json:"postal_code"`
-	Country      string `json:"country"`
-	Phone        string `json:"phone"`
-	PhoneExt     string `json:"phone_ext"`
-	Fax          string `json:"fax"`
-	FaxExt       string `json:"fax_ext"`
-	Email        string `json:"email"`
-	ReferralURL  string `json:"referral_url"`
+	ID           string `json:"id,omitempty"`
+	Name         string `json:"name,omitempty"`
+	Organization string `json:"organization,omitempty"`
+	Street       string `json:"street,omitempty"`
+	City         string `json:"city,omitempty"`
+	Province     string `json:"province,omitempty"`
+	PostalCode   string `json:"postal_code,omitempty"`
+	Country      string `json:"country,omitempty"`
+	Phone        string `json:"phone,omitempty"`
+	PhoneExt     string `json:"phone_ext,omitempty"`
+	Fax          string `json:"fax,omitempty"`
+	FaxExt       string `json:"fax_ext,omitempty"`
+	Email        string `json:"email,omitempty"`
+	ReferralURL  string `json:"referral_url,omitempty"`
 }

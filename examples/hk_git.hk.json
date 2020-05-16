@@ -1,0 +1,28 @@
+{
+    "domain": {
+        "domain": "git.hk",
+        "name": "git",
+        "extension": "hk",
+        "status": [
+            "active"
+        ],
+        "name_servers": [
+            "f1g1ns1.dnspod.net",
+            "f1g1ns2.dnspod.net"
+        ],
+        "created_date": "11-07-2017",
+        "expiration_date": "11-07-2020"
+    },
+    "registrar": {
+        "name": "WEST263 INTERNATIONAL LIMITED"
+    },
+    "registrant": {
+        "name": "JACK BI",
+        "country": "China (CN)",
+        "email": "b@bzizi.com"
+    },
+    "technical": {
+        "name": "JACK BI",
+        "organization": "JACK BI"
+    }
+}

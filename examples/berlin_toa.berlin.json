@@ -1,0 +1,27 @@
+{
+    "domain": {
+        "id": "D0000176766-BERLIN",
+        "domain": "toa.berlin",
+        "name": "toa",
+        "extension": "berlin",
+        "status": [
+            "clienttransferprohibited"
+        ],
+        "name_servers": [
+            "ns-1232.awsdns-26.org",
+            "ns-1962.awsdns-53.co.uk",
+            "ns-412.awsdns-51.com",
+            "ns-903.awsdns-48.net"
+        ],
+        "created_date": "2014-06-16T19:42:59Z",
+        "updated_date": "2017-01-24T23:11:12Z",
+        "expiration_date": "2020-06-16T19:42:59Z"
+    },
+    "registrar": {
+        "id": "1420",
+        "name": "InterNetworX GmbH & Co. KG",
+        "phone": "+49.309832120",
+        "email": "info@inwx.de",
+        "referral_url": "http://www.inwx.berlin"
+    }
+}

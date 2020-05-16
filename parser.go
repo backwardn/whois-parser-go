@@ -25,6 +25,7 @@ import (
 	"strings"
 
 	"github.com/likexian/gokit/assert"
+	"github.com/likexian/gokit/xslice"
 )
 
 // Domain info error and replacer variables
@@ -36,7 +37,7 @@ var (
 
 // Version returns package version
 func Version() string {
-	return "1.10.1"
+	return "1.14.1"
 }
 
 // Author returns package author
@@ -62,12 +63,12 @@ func Parse(text string) (whoisInfo WhoisInfo, err error) {
 		return
 	}
 
-	var domain Domain
-	var registrar Contact
-	var registrant Contact
-	var administrative Contact
-	var technical Contact
-	var billing Contact
+	domain := &Domain{}
+	registrar := &Contact{}
+	registrant := &Contact{}
+	administrative := &Contact{}
+	technical := &Contact{}
+	billing := &Contact{}
 
 	domain.Name = name
 	domain.Extension = extension
@@ -112,19 +113,19 @@ func Parse(text string) (whoisInfo WhoisInfo, err error) {
 		case "domain_id":
 			domain.ID = value
 		case "domain_name":
-			domain.Domain = value
+			domain.Domain = strings.ToLower(value)
 		case "domain_status":
-			domain.Status += value + ","
+			domain.Status = append(domain.Status, strings.Split(value, ",")...)
 		case "domain_dnssec":
-			if domain.DNSSEC == "" {
-				domain.DNSSEC = value
+			if !domain.DnsSec {
+				domain.DnsSec = IsDnsSecEnabled(value)
 			}
 		case "whois_server":
 			if domain.WhoisServer == "" {
 				domain.WhoisServer = value
 			}
 		case "name_servers":
-			domain.NameServers += value + ","
+			domain.NameServers = append(domain.NameServers, strings.Split(value, ",")...)
 		case "created_date":
 			if domain.CreatedDate == "" {
 				domain.CreatedDate = value
@@ -147,40 +148,52 @@ func Parse(text string) (whoisInfo WhoisInfo, err error) {
 			ns := strings.SplitN(name, " ", 2)
 			name = strings.TrimSpace("registrant " + ns[1])
 			if ns[0] == "registrar" || ns[0] == "registration" {
-				registrar = parseContact(registrar, name, value)
+				parseContact(registrar, name, value)
 			} else if ns[0] == "registrant" || ns[0] == "holder" {
-				registrant = parseContact(registrant, name, value)
+				parseContact(registrant, name, value)
 			} else if ns[0] == "admin" || ns[0] == "administrative" {
-				administrative = parseContact(administrative, name, value)
+				parseContact(administrative, name, value)
 			} else if ns[0] == "tech" || ns[0] == "technical" {
-				technical = parseContact(technical, name, value)
+				parseContact(technical, name, value)
 			} else if ns[0] == "bill" || ns[0] == "billing" {
-				billing = parseContact(billing, name, value)
+				parseContact(billing, name, value)
 			}
 		}
 	}
 
-	domain.NameServers = FixNameServers(strings.ToLower(domain.NameServers))
-	domain.Status = FixDomainStatus(strings.ToLower(domain.Status))
+	domain.NameServers = FixNameServers(domain.NameServers)
+	domain.Status = FixDomainStatus(domain.Status)
 
-	domain.NameServers = RemoveDuplicateField(domain.NameServers)
-	domain.Status = RemoveDuplicateField(domain.Status)
+	domain.NameServers = xslice.Unique(domain.NameServers).([]string)
+	domain.Status = xslice.Unique(domain.Status).([]string)
 
 	whoisInfo.Domain = domain
-	whoisInfo.Registrar = registrar
-	whoisInfo.Registrant = registrant
-	whoisInfo.Administrative = administrative
-	whoisInfo.Technical = technical
-	whoisInfo.Billing = billing
+	if *registrar != (Contact{}) {
+		whoisInfo.Registrar = registrar
+	}
+
+	if *registrant != (Contact{}) {
+		whoisInfo.Registrant = registrant
+	}
+
+	if *administrative != (Contact{}) {
+		whoisInfo.Administrative = administrative
+	}
+
+	if *technical != (Contact{}) {
+		whoisInfo.Technical = technical
+	}
+
+	if *billing != (Contact{}) {
+		whoisInfo.Billing = billing
+	}
 
 	return
 }
 
 // parseContact do parse contact info
-func parseContact(contact Contact, name, value string) Contact {
-	keyName := FindKeyName(name)
-
-	switch keyName {
+func parseContact(contact *Contact, name, value string) {
+	switch FindKeyName(name) {
 	case "registrant_id":
 		contact.ID = value
 	case "registrant_name":
@@ -212,8 +225,6 @@ func parseContact(contact Contact, name, value string) Contact {
 	case "registrant_email":
 		contact.Email = strings.ToLower(value)
 	}
-
-	return contact
 }
 
 // searchDomain find domain from whois info

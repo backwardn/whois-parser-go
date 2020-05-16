@@ -1,0 +1,31 @@
+{
+    "domain": {
+        "domain": "espm.br",
+        "name": "espm",
+        "extension": "br",
+        "status": [
+            "published"
+        ],
+        "name_servers": [
+            "ns-1434.awsdns-51.org",
+            "ns-340.awsdns-42.com",
+            "ns-1751.awsdns-26.co.uk",
+            "ns-538.awsdns-03.net"
+        ],
+        "created_date": "19961206 #24302",
+        "updated_date": "20150427"
+    },
+    "registrant": {
+        "name": "Cosmo Luis Arrivabene",
+        "organization": "ASSOC.ESC. SUPERIOR DE PROPAGANDA E MARKETING - SP"
+    },
+    "administrative": {
+        "name": "Cosmo Luis Arrivabene"
+    },
+    "technical": {
+        "name": "Cosmo Luis Arrivabene"
+    },
+    "billing": {
+        "name": "Fabio Takeuti"
+    }
+}

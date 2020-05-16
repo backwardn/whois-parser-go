@@ -1,0 +1,30 @@
+{
+    "domain": {
+        "domain": "google.jp",
+        "name": "google",
+        "extension": "jp",
+        "status": [
+            "active"
+        ],
+        "name_servers": [
+            "ns1.google.com",
+            "ns2.google.com",
+            "ns3.google.com",
+            "ns4.google.com"
+        ],
+        "created_date": "2005/05/30",
+        "updated_date": "2017/06/01 01:05:09 (JST)",
+        "expiration_date": "2018/05/31"
+    },
+    "registrant": {
+        "name": "Google Inc."
+    },
+    "administrative": {
+        "name": "Google Inc.",
+        "street": "Mountain View, 1600 Amphitheatre Parkway, US",
+        "postal_code": "94043",
+        "phone": "16502530000",
+        "fax": "16502530001",
+        "email": "dns-admin@google.com"
+    }
+}

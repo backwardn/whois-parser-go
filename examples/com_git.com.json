@@ -1,0 +1,56 @@
+{
+    "domain": {
+        "id": "72657455_DOMAIN_COM-VRSN",
+        "domain": "git.com",
+        "name": "git",
+        "extension": "com",
+        "whois_server": "whois.uniregistrar.net",
+        "status": [
+            "clienttransferprohibited"
+        ],
+        "name_servers": [
+            "ns2.venture.com",
+            "ns1.venture.com"
+        ],
+        "created_date": "2001-06-14-T10:32:43Z",
+        "updated_date": "2019-05-17-T23:02:50Z",
+        "expiration_date": "2020-06-14-T10:32:43Z"
+    },
+    "registrar": {
+        "id": "1659",
+        "name": "UNIREGISTRAR CORP",
+        "phone": "+1.4426008800",
+        "email": "abuse@uniregistry.com",
+        "referral_url": "http://uniregistry.com"
+    },
+    "registrant": {
+        "name": "PRIVACYDOTLINK CUSTOMER 1078347",
+        "street": "PO BOX 30485",
+        "city": "SEVEN MILE BEACH",
+        "province": "GRAND CAYMAN",
+        "postal_code": "KY1-1202",
+        "country": "KY",
+        "phone": "+1.3457495465",
+        "email": "1078347@privacy-link.com"
+    },
+    "administrative": {
+        "name": "PRIVACYDOTLINK CUSTOMER 1078347",
+        "street": "PO BOX 30485",
+        "city": "SEVEN MILE BEACH",
+        "province": "GRAND CAYMAN",
+        "postal_code": "KY1-1202",
+        "country": "KY",
+        "phone": "+1.3457495465",
+        "email": "1078347@privacy-link.com"
+    },
+    "technical": {
+        "name": "PRIVACYDOTLINK CUSTOMER 1078347",
+        "street": "PO BOX 30485",
+        "city": "SEVEN MILE BEACH",
+        "province": "GRAND CAYMAN",
+        "postal_code": "KY1-1202",
+        "country": "KY",
+        "phone": "+1.3457495465",
+        "email": "1078347@privacy-link.com"
+    }
+}

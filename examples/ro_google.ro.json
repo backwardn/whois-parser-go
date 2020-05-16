@@ -1,0 +1,22 @@
+{
+    "domain": {
+        "domain": "google.ro",
+        "name": "google",
+        "extension": "ro",
+        "status": [
+            "updateprohibited"
+        ],
+        "name_servers": [
+            "ns1.google.com",
+            "ns2.google.com",
+            "ns3.google.com",
+            "ns4.google.com"
+        ],
+        "created_date": "2000-07-17",
+        "expiration_date": "2020-09-16"
+    },
+    "registrar": {
+        "name": "MarkMonitor Inc.",
+        "referral_url": "www.markmonitor.com"
+    }
+}

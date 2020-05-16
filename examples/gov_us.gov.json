@@ -1,0 +1,10 @@
+{
+    "domain": {
+        "domain": "us.gov",
+        "name": "us",
+        "extension": "gov",
+        "status": [
+            "active"
+        ]
+    }
+}

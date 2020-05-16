@@ -1,0 +1,17 @@
+{
+    "domain": {
+        "domain": "msn.tw",
+        "name": "msn",
+        "extension": "tw",
+        "created_date": "2005-10-27 (YYYY-MM-DD)",
+        "expiration_date": "2019-10-27 (YYYY-MM-DD)"
+    },
+    "registrar": {
+        "name": "HINET",
+        "referral_url": "http://domain.hinet.net"
+    },
+    "registrant": {
+        "name": "Simmy Wang",
+        "email": "simmy.wang@gmail.com"
+    }
+}

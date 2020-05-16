@@ -1,0 +1,49 @@
+{
+    "domain": {
+        "domain": "yp.mo",
+        "name": "yp",
+        "extension": "mo",
+        "name_servers": [
+            "kim.ns.cloudflare.com",
+            "art.ns.cloudflare.com"
+        ],
+        "created_date": "2005-04-15 21:43:27",
+        "expiration_date": "2020-11-02"
+    },
+    "registrant": {
+        "name": "George Shew",
+        "organization": "Directel Macau Ltd.",
+        "street": "Alm.Dr. Carlos d'Assumpcao 411-417, Dynasty Plaza 21/O",
+        "city": "Macau",
+        "phone": "28517520",
+        "fax": "28517523",
+        "email": "george@yp.mo"
+    },
+    "administrative": {
+        "name": "Simon Leung",
+        "organization": "Directel Macau Ltd.",
+        "street": "Alm.Dr. Carlos d'Assumpcao 411-417, Dynasty Plaza 21/O",
+        "city": "Macau",
+        "phone": "28517520",
+        "fax": "28517523",
+        "email": "domain@yp.com.mo"
+    },
+    "technical": {
+        "name": "Simon Leung",
+        "organization": "Directel Macau Ltd.",
+        "street": "Alm Dr. Carlos d'Assumpcao 411-417, Edf. Dynasty Plaza 21",
+        "city": "Macau",
+        "phone": "28517520",
+        "fax": "28517523",
+        "email": "simon.leung@yp.com.mo"
+    },
+    "billing": {
+        "name": "Eliza Loi",
+        "organization": "Directel Macau Ltd.",
+        "street": "Alm Dr. Carlos d'Assumpcao 411-417, Edf. Dynasty Plaza 21",
+        "city": "Macau",
+        "phone": "28517520",
+        "fax": "28517523",
+        "email": "eliza.loi@yp.com.mo"
+    }
+}

@@ -1,0 +1,34 @@
+{
+    "domain": {
+        "domain": "google.fi",
+        "name": "google",
+        "extension": "fi",
+        "status": [
+            "registered"
+        ],
+        "name_servers": [
+            "ns3.google.com",
+            "ns4.google.com",
+            "ns1.google.com",
+            "ns2.google.com"
+        ],
+        "created_date": "30.6.2006 00:00:00",
+        "updated_date": "2.6.2019",
+        "expiration_date": "4.7.2020 10:15:55"
+    },
+    "registrar": {
+        "name": "MarkMonitor Inc.",
+        "referral_url": "www.markmonitor.com"
+    },
+    "registrant": {
+        "id": "3582691",
+        "name": "Google LLC",
+        "street": "1600 Amphitheatre Parkway, 94043, Mountain View",
+        "country": "United States of America",
+        "phone": "+1.6502530000"
+    },
+    "technical": {
+        "name": "Google LLC",
+        "email": "ccops@markmonitor.com"
+    }
+}

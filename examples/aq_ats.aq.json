@@ -1,0 +1,14 @@
+{
+    "domain": {
+        "domain": "ats.aq",
+        "name": "ats",
+        "extension": "aq",
+        "status": [
+            "taken"
+        ],
+        "name_servers": [
+            "ns19.zoneedit.com",
+            "ns4.zoneedit.com"
+        ]
+    }
+}

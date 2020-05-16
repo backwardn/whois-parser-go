@@ -1,0 +1,15 @@
+{
+    "domain": {
+        "domain": "bin.hm",
+        "name": "bin",
+        "extension": "hm",
+        "status": [
+            "taken"
+        ],
+        "name_servers": [
+            "ns.udag.de",
+            "ns.udag.net",
+            "ns.udag.org"
+        ]
+    }
+}

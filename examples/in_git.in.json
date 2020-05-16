@@ -1,0 +1,35 @@
+{
+    "domain": {
+        "id": "D509774-IN",
+        "domain": "git.in",
+        "name": "git",
+        "extension": "in",
+        "status": [
+            "clienttransferprohibited"
+        ],
+        "name_servers": [
+            "ns1.parkingcrew.net",
+            "ns2.parkingcrew.net"
+        ],
+        "created_date": "2005-02-16T06:54:49Z",
+        "updated_date": "2019-03-15T19:06:26Z",
+        "expiration_date": "2020-02-16T06:54:49Z"
+    },
+    "registrar": {
+        "id": "801217",
+        "name": "Endurance Domains Technology LLP",
+        "referral_url": "https://publicdomainregistry.com/"
+    },
+    "registrant": {
+        "organization": "Treadall Inc.",
+        "province": "Ontario",
+        "country": "CA",
+        "email": "please contact the registrar listed above"
+    },
+    "administrative": {
+        "email": "please contact the registrar listed above"
+    },
+    "technical": {
+        "email": "please contact the registrar listed above"
+    }
+}

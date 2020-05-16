@@ -1,0 +1,42 @@
+{
+    "domain": {
+        "domain": "moo.mo",
+        "name": "moo",
+        "extension": "mo",
+        "name_servers": [
+            "ns3.wordpress.com",
+            "ns2.wordpress.com",
+            "ns1.wordpress.com"
+        ],
+        "created_date": "2018-02-05 22:59:12.55172",
+        "expiration_date": "2021-02-05"
+    },
+    "registrant": {
+        "name": "陳秀霞",
+        "organization": "澳門有機緣貿易有限公司",
+        "street": "澳門雅廉訪大馬路37號達豐大廈地下A鋪",
+        "city": "澳門",
+        "email": "olivia63361668@gmail.com"
+    },
+    "administrative": {
+        "name": "陳秀霞",
+        "organization": "澳門有機緣貿易有限公司",
+        "street": "澳門雅廉訪大馬路37號達豐大廈地下A鋪",
+        "city": "澳門",
+        "email": "olivia63361668@gmail.com"
+    },
+    "technical": {
+        "name": "陳秀霞",
+        "organization": "澳門有機緣貿易有限公司",
+        "street": "澳門雅廉訪大馬路37號達豐大廈地下A鋪",
+        "city": "澳門",
+        "email": "olivia63361668@gmail.com"
+    },
+    "billing": {
+        "name": "陳秀霞",
+        "organization": "澳門有機緣貿易有限公司",
+        "street": "澳門雅廉訪大馬路37號達豐大廈地下A鋪",
+        "city": "澳門",
+        "email": "olivia63361668@gmail.com"
+    }
+}
